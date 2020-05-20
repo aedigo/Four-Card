@@ -1,0 +1,27 @@
+@use './font.scss';
+
+@mixin inside() {
+  background: hsl(0, 0%, 98%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+
+  .section {
+    &__box {
+      &__header {
+        @include font.style(20px, 600, none, 24px 24px 2px 24px);
+      }
+      &__paragraph {
+        @include font.style(14px, 400, none, 0 24px);
+
+        color: hsl(229, 6%, 66%);
+      }
+      &__img {
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+      }
+    }
+  }
+}

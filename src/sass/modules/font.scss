@@ -1,0 +1,15 @@
+@mixin style($size, $weight, $align, $padding) {
+  @if ($size != none) {
+    font-size: $size;
+  }
+  @if ($weight != none) {
+    font-weight: $weight;
+  }
+  @if ($align != none) {
+    text-align: $align;
+  }
+
+  @if ($padding != none) {
+    padding: $padding;
+  }
+}

@@ -1,0 +1,66 @@
+@use './font.scss';
+
+// global values
+.header {
+  @include font.style(none, none, center, unset);
+
+  margin: 60px 0 60px 0;
+
+  &__about {
+    color: hsl(229, 6%, 66%);
+    margin: 16px auto;
+  }
+}
+
+// Desktop / Notebook screens
+@media only screen and (min-width: 1100px) {
+  .main {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .header {
+    &__secondary-text {
+      color: hsl(229, 6%, 66%);
+      @include font.style(36px, 200, none, unset);
+    }
+    &__primary-text {
+      @include font.style(36px, 600, none, unset);
+    }
+    &__about {
+      width: 500px;
+    }
+  }
+}
+
+// Tablets / Smartphones
+@media only screen and (max-width: 1100px) {
+  .header {
+      &__secondary-text {
+        color: hsl(229, 6%, 66%);
+        @include font.style(28px, 200, none, unset);
+      }
+      &__primary-text {
+        @include font.style(28px, 600, none, unset);
+      }
+    &__about {
+      margin: 16px auto;
+    }
+  }
+}
+
+// Smartphones lower then 360px
+@media only screen and (max-width: 360px) {
+  .header {
+    &__secondary-text {
+      @include font.style(28px, 200, none, unset);
+    }
+    &__primary-text {
+      @include font.style(28px, 600, none, unset);
+    }
+    &__about {
+      @include font.style(16px, 400, none, unset);
+    }
+  }
+}
